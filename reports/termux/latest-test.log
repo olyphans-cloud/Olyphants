@@ -1,1 +1,272 @@
-Laporan tes belum ditemukan: /data/data/com.termux/files/home/olypants-test-result.log
+test_chain_detects_tamper (tests.test_core.TestAudit.test_chain_detects_tamper) ... ok
+test_redaction_by_key (tests.test_core.TestAudit.test_redaction_by_key) ... ok
+test_bad_data_refused (tests.test_core.TestBacktest.test_bad_data_refused) ... ok
+test_holdout_single_use (tests.test_core.TestBacktest.test_holdout_single_use) ... ok
+test_no_negative_cash_and_pos_closed (tests.test_core.TestBacktest.test_no_negative_cash_and_pos_closed) ... ok
+test_reproducible_and_costs_matter (tests.test_core.TestBacktest.test_reproducible_and_costs_matter) ... ok
+test_config_hash_changes (tests.test_core.TestConfigAndGates.test_config_hash_changes) ... ok
+test_live_and_testnet_locked (tests.test_core.TestConfigAndGates.test_live_and_testnet_locked) ... ok
+test_live_stays_locked_even_with_phrase_but_no_gates (tests.test_core.TestConfigAndGates.test_live_stays_locked_even_with_phrase_but_no_gates) ... ok
+test_unknown_key_and_bad_ranges (tests.test_core.TestConfigAndGates.test_unknown_key_and_bad_ranges) ... ok
+test_detects_problems (tests.test_core.TestData.test_detects_problems) ... ok
+test_stale (tests.test_core.TestData.test_stale) ... ok
+test_duplicate_is_idempotent (tests.test_core.TestExecution.test_duplicate_is_idempotent) ... ok
+test_forged_order_rejected (tests.test_core.TestExecution.test_forged_order_rejected) ... ok
+test_long_entry_slippage_adverse_and_fee (tests.test_core.TestExecution.test_long_entry_slippage_adverse_and_fee) ... ok
+test_sim_adapter_refuses_live_mode (tests.test_core.TestExecution.test_sim_adapter_refuses_live_mode) ... ok
+test_stop_wins_when_both_hit_and_gap_fills_at_open (tests.test_core.TestExecution.test_stop_wins_when_both_hit_and_gap_fills_at_open) ... ok
+test_tampered_qty_rejected (tests.test_core.TestExecution.test_tampered_qty_rejected) ... ok
+test_atr_constant_range (tests.test_core.TestIndicators.test_atr_constant_range) ... ok
+test_causality_truncation (tests.test_core.TestIndicators.test_causality_truncation) ... ok
+test_ema_seed_and_next (tests.test_core.TestIndicators.test_ema_seed_and_next) ... ok
+test_rsi_bounds_and_monotonic (tests.test_core.TestIndicators.test_rsi_bounds_and_monotonic) ... ok
+test_reconcile_and_persistence (tests.test_core.TestLedger.test_reconcile_and_persistence) ... ok
+test_roundtrip_accounting_long_and_short (tests.test_core.TestLedger.test_roundtrip_accounting_long_and_short) ... ok
+test_drawdown_latches_halt (tests.test_core.TestRisk.test_drawdown_latches_halt) ... ok
+test_fail_safe_on_garbage (tests.test_core.TestRisk.test_fail_safe_on_garbage) ... ok
+test_kill_switch_file (tests.test_core.TestRisk.test_kill_switch_file) ... ok
+test_live_mode_never_approves (tests.test_core.TestRisk.test_live_mode_never_approves) ... ok
+test_rejections (tests.test_core.TestRisk.test_rejections) ... ok
+test_sizing_respects_risk_and_lot (tests.test_core.TestRisk.test_sizing_respects_risk_and_lot) ... ok
+test_signal_invariant_to_future (tests.test_core.TestStrategyNoLookahead.test_signal_invariant_to_future) ... ok
+test_backtest_runs_and_sides (tests.test_d1h4.Pipeline.test_backtest_runs_and_sides) ... ok
+test_causal_no_lookahead (tests.test_d1h4.Pipeline.test_causal_no_lookahead) ... ok
+test_config_guards (tests.test_d1h4.Pipeline.test_config_guards) ... ok
+test_d1_only_complete_days (tests.test_d1h4.Pipeline.test_d1_only_complete_days) ... ok
+test_futures_long_sweep (tests.test_d1h4.Setups.test_futures_long_sweep) ... ok
+test_futures_short_sweep (tests.test_d1h4.Setups.test_futures_short_sweep) ... ok
+test_spot_buy_and_rejects (tests.test_d1h4.Setups.test_spot_buy_and_rejects) ... ok
+test_cooldown_actually_blocks_following_signals (tests.test_fixes_v011.CooldownConfigTests.test_cooldown_actually_blocks_following_signals) ... ok
+test_cooldown_shorter_than_candle_rejected (tests.test_fixes_v011.CooldownConfigTests.test_cooldown_shorter_than_candle_rejected) ... ok
+test_default_cooldown_is_longer_than_a_candle (tests.test_fixes_v011.CooldownConfigTests.test_default_cooldown_is_longer_than_a_candle) ... ok
+test_concurrent_run_is_skipped_by_lock (tests.test_fixes_v011.PaperGapAndLockTests.test_concurrent_run_is_skipped_by_lock) ... ok
+test_gap_with_open_position_halts (tests.test_fixes_v011.PaperGapAndLockTests.test_gap_with_open_position_halts) ... ok
+test_gap_without_position_does_not_halt (tests.test_fixes_v011.PaperGapAndLockTests.test_gap_without_position_does_not_halt) ... ok
+test_no_gap_in_normal_operation (tests.test_fixes_v011.PaperGapAndLockTests.test_no_gap_in_normal_operation) ... ok
+test_latest_closed_matches_naive_scan (tests.test_fixes_v011.WarmupAndPerformanceTests.test_latest_closed_matches_naive_scan) ... ok
+test_mtf_required_warmup_covers_first_signal (tests.test_fixes_v011.WarmupAndPerformanceTests.test_mtf_required_warmup_covers_first_signal) ... ok
+test_signal_same_on_truncated_data (tests.test_lab_strategies.LabNoLookahead.test_signal_same_on_truncated_data) ... ok
+test_signals_have_valid_geometry (tests.test_lab_strategies.LabNoLookahead.test_signals_have_valid_geometry) ... ok
+test_aggregate_requires_complete_groups (tests.test_mtf_strategy.MtfStrategyTests.test_aggregate_requires_complete_groups) ... ok
+test_incomplete_higher_timeframe_does_not_use_future_candle (tests.test_mtf_strategy.MtfStrategyTests.test_incomplete_higher_timeframe_does_not_use_future_candle) ... ok
+test_strategy_returns_signal_type_and_uses_15m_input (tests.test_mtf_strategy.MtfStrategyTests.test_strategy_returns_signal_type_and_uses_15m_input) ... ok
+test_fetch_failure_is_safe (tests.test_paper.TestPaperStep.test_fetch_failure_is_safe) ... ok
+test_halt_persists_across_runs (tests.test_paper.TestPaperStep.test_halt_persists_across_runs) ... ok
+test_init_then_incremental_and_audit_chain (tests.test_paper.TestPaperStep.test_init_then_incremental_and_audit_chain) ... ok
+test_rerun_same_data_is_idempotent (tests.test_paper.TestPaperStep.test_rerun_same_data_is_idempotent) ... ok
+test_stale_data_is_refused (tests.test_paper.TestPaperStep.test_stale_data_is_refused) ... ok
+test_unclosed_candle_dropped (tests.test_paper.TestPaperStep.test_unclosed_candle_dropped) ... ok
+test_bad_audit_blocks_recovery (tests.test_recovery.TestGuidedHaltRecovery.test_bad_audit_blocks_recovery) ... ok
+test_kill_switch_blocks_recovery (tests.test_recovery.TestGuidedHaltRecovery.test_kill_switch_blocks_recovery) ... ok
+test_recover_preserves_ledger_and_audits (tests.test_recovery.TestGuidedHaltRecovery.test_recover_preserves_ledger_and_audits) ... ok
+test_recovery_requires_confirmation (tests.test_recovery.TestGuidedHaltRecovery.test_recovery_requires_confirmation) ... ok
+test_evidence_required (tests.test_roadmap_modules.TestGatesG0toG8.test_evidence_required) ... ok
+test_live_needs_g0_to_g6_plus_approval_plus_env (tests.test_roadmap_modules.TestGatesG0toG8.test_live_needs_g0_to_g6_plus_approval_plus_env) ... ok
+test_nine_gates (tests.test_roadmap_modules.TestGatesG0toG8.test_nine_gates) ... ok
+test_any_state_to_safe_and_exit_only_by_recover (tests.test_roadmap_modules.TestStateMachine.test_any_state_to_safe_and_exit_only_by_recover) ... ok
+test_entries_blocked_by_failures_and_state (tests.test_roadmap_modules.TestStateMachine.test_entries_blocked_by_failures_and_state) ... ok
+test_failure_table (tests.test_roadmap_modules.TestStateMachine.test_failure_table) ... ok
+test_happy_path_and_audit (tests.test_roadmap_modules.TestStateMachine.test_happy_path_and_audit) ... ok
+test_illegal_jumps_blocked (tests.test_roadmap_modules.TestStateMachine.test_illegal_jumps_blocked) ... ok
+test_precedence_and_flags_never_loosen (tests.test_roadmap_modules.TestStateMachine.test_precedence_and_flags_never_loosen) ... ok
+test_recover_refused_while_failure_active (tests.test_roadmap_modules.TestStateMachine.test_recover_refused_while_failure_active) ... ok
+test_clock_health_is_hard_dependency (tests.test_roadmap_modules.TestTimeContract.test_clock_health_is_hard_dependency) ... ok
+test_decision_id_depends_on_config_and_data (tests.test_roadmap_modules.TestTimeContract.test_decision_id_depends_on_config_and_data) ... ok
+test_engine_logs_decision_id_consistently (tests.test_roadmap_modules.TestTimeContract.test_engine_logs_decision_id_consistently) ... ok
+test_late_arriving_data_not_usable_for_earlier_decision (tests.test_roadmap_modules.TestTimeContract.test_late_arriving_data_not_usable_for_earlier_decision) ... ok
+test_provisional_blocked_by_default (tests.test_roadmap_modules.TestTimeContract.test_provisional_blocked_by_default) ... ok
+test_snapshot_immutable_deterministic_and_checks_inputs (tests.test_roadmap_modules.TestTimeContract.test_snapshot_immutable_deterministic_and_checks_inputs) ... ok
+test_statuses (tests.test_roadmap_modules.TestTimeContract.test_statuses) ... ok
+test_unknown_is_never_neutral (tests.test_roadmap_modules.TestTimeContract.test_unknown_is_never_neutral) ... ok
+test_corrupt_state_fails_closed (tests.test_safeguard.TestSafeguard.test_corrupt_state_fails_closed) ... ok
+test_halt_persists (tests.test_safeguard.TestSafeguard.test_halt_persists) ... ok
+test_loss_streak_cooldown_and_persistence (tests.test_safeguard.TestSafeguard.test_loss_streak_cooldown_and_persistence) ... ok
+test_max_hold (tests.test_safeguard.TestSafeguard.test_max_hold) ... ok
+test_spread_valid_and_rejected (tests.test_safeguard.TestSafeguard.test_spread_valid_and_rejected) ... ok
+test_trailing_stop_monotonic (tests.test_safeguard.TestSafeguard.test_trailing_stop_monotonic) ... ok
+test_all_four_load_and_are_safe (tests.test_swing_configs.SwingConfigs.test_all_four_load_and_are_safe) ... ok
+test_spot_never_shorts_futures_can (tests.test_swing_configs.SwingConfigs.test_spot_never_shorts_futures_can) ... ok
+test_state_dirs_are_separate (tests.test_swing_configs.SwingConfigs.test_state_dirs_are_separate) ... ok
+test_disabled_returns_false (tests.test_telegram_notifier.TelegramNotifierTests.test_disabled_returns_false) ... ok
+test_signal_formats_message (tests.test_telegram_notifier.TelegramNotifierTests.test_signal_formats_message) ... ok
+test_connection_lost_leaves_state_untouched_and_resumes (tests.test_v020_failure_recovery.ConnectionAndDataFailureTests.test_connection_lost_leaves_state_untouched_and_resumes) ... ok
+test_invalid_data_is_refused_without_touching_state (tests.test_v020_failure_recovery.ConnectionAndDataFailureTests.test_invalid_data_is_refused_without_touching_state) ... ok
+test_kill_switch_blocks_entries_but_not_exits (tests.test_v020_failure_recovery.ConnectionAndDataFailureTests.test_kill_switch_blocks_entries_but_not_exits) ... ok
+test_stale_data_is_refused (tests.test_v020_failure_recovery.ConnectionAndDataFailureTests.test_stale_data_is_refused) ... ok
+test_gap_halt_with_open_position_requires_recovery (tests.test_v020_failure_recovery.HaltRecoveryTests.test_gap_halt_with_open_position_requires_recovery) ... ok
+test_recovery_does_not_bypass_drawdown_limit (tests.test_v020_failure_recovery.HaltRecoveryTests.test_recovery_does_not_bypass_drawdown_limit)
+Setelah recover, drawdown masih di atas batas => halt terpasang lagi pada sinyal berikutnya. ... ok
+test_recovery_keeps_history_ledger_position_and_loss_streak (tests.test_v020_failure_recovery.HaltRecoveryTests.test_recovery_keeps_history_ledger_position_and_loss_streak) ... ok
+test_recovery_refused_when_not_halted (tests.test_v020_failure_recovery.HaltRecoveryTests.test_recovery_refused_when_not_halted) ... ok
+test_recovery_requires_explicit_confirmation (tests.test_v020_failure_recovery.HaltRecoveryTests.test_recovery_requires_explicit_confirmation) ... ok
+test_safeguard_only_halt_is_visible_and_recoverable (tests.test_v020_failure_recovery.HaltRecoveryTests.test_safeguard_only_halt_is_visible_and_recoverable)
+Regresi: dulu diagnose melapor 'tidak halted' dan recover menolak -> buntu. ... ok
+test_corrupt_state_is_refused_not_reset (tests.test_v020_failure_recovery.RestartAndCrashTests.test_corrupt_state_is_refused_not_reset) ... ok
+test_crash_while_saving_state_keeps_old_state_and_replay_is_consistent (tests.test_v020_failure_recovery.RestartAndCrashTests.test_crash_while_saving_state_keeps_old_state_and_replay_is_consistent)
+Crash tepat saat commit state: berkas lama utuh; ulang langkah itu menghasilkan state yang SAMA ... ok
+test_restart_with_open_position_restores_it_and_enforces_stop (tests.test_v020_failure_recovery.RestartAndCrashTests.test_restart_with_open_position_restores_it_and_enforces_stop) ... ok
+test_second_process_is_blocked_by_lock (tests.test_v020_failure_recovery.RestartAndCrashTests.test_second_process_is_blocked_by_lock) ... ok
+test_structurally_wrong_state_is_refused (tests.test_v020_failure_recovery.RestartAndCrashTests.test_structurally_wrong_state_is_refused) ... ok
+test_backward_compatible_without_timestamp (tests.test_v020_failure_recovery.SafeguardIdempotencyTests.test_backward_compatible_without_timestamp) ... ok
+test_same_trade_not_counted_twice (tests.test_v020_failure_recovery.SafeguardIdempotencyTests.test_same_trade_not_counted_twice) ... ok
+test_explicit_rejection_halts_too (tests.test_v020_failure_recovery.UnknownOrderStatusTests.test_explicit_rejection_halts_too) ... ok
+test_timeout_during_submit_halts_and_blocks_retry (tests.test_v020_failure_recovery.UnknownOrderStatusTests.test_timeout_during_submit_halts_and_blocks_retry) ... ok
+test_backtest_runs_and_is_deterministic (tests.test_v020_modes.H1StrategyTests.test_backtest_runs_and_is_deterministic) ... ok
+test_h1_golden_hash (tests.test_v020_modes.H1StrategyTests.test_h1_golden_hash)
+Regresi: berubah hanya bila logika H1/engine/risk berubah (sengaja). ... FAIL
+test_h1_signals_are_subset_of_base_with_slope_filter (tests.test_v020_modes.H1StrategyTests.test_h1_signals_are_subset_of_base_with_slope_filter) ... ok
+test_no_lookahead (tests.test_v020_modes.H1StrategyTests.test_no_lookahead) ... ok
+test_mtf_golden_result (tests.test_v020_modes.LegacyModeRegressionTests.test_mtf_golden_result)
+Regresi. v4: hash 739d19906c93 (83 trade, +10,1998%). v0.3.0: 3d93f705f0b2 (83 trade, +10,2189%). ... FAIL
+test_atr_floor_filters_quiet_market (tests.test_v020_modes.M1StrategyTests.test_atr_floor_filters_quiet_market) ... ok
+test_edge_filter_blocks_all_entries_when_costs_swallow_the_target (tests.test_v020_modes.M1StrategyTests.test_edge_filter_blocks_all_entries_when_costs_swallow_the_target)
+Biaya ekstrem (0,5%/sisi) > TP: filter edge menolak semua entry. (Kelayakan M1 pada fee nyata ... ok
+test_integration_exercises_trailing_and_max_hold (tests.test_v020_modes.M1StrategyTests.test_integration_exercises_trailing_and_max_hold) ... ok
+test_long_signals_follow_pullback_resume_rule (tests.test_v020_modes.M1StrategyTests.test_long_signals_follow_pullback_resume_rule) ... ok
+test_example_configs_valid_and_distinct (tests.test_v020_modes.ModeConfigTests.test_example_configs_valid_and_distinct) ... ok
+test_factory_returns_independent_classes (tests.test_v020_modes.ModeConfigTests.test_factory_returns_independent_classes) ... ok
+test_interval_must_match_mode (tests.test_v020_modes.ModeConfigTests.test_interval_must_match_mode) ... ok
+test_unknown_mode_rejected (tests.test_v020_modes.ModeConfigTests.test_unknown_mode_rejected) ... ok
+test_control_without_symbol_limit_the_same_data_does_overlap (tests.test_v020_portfolio.PortfolioSimulationTests.test_control_without_symbol_limit_the_same_data_does_overlap)
+Kontrol: tanpa batas per-simbol data yang sama MENUMPUK -> pemeriksaan tumpang tindih bermakna. ... ok
+test_deterministic (tests.test_v020_portfolio.PortfolioSimulationTests.test_deterministic) ... ok
+test_h1_and_m1_on_same_symbol_never_hold_overlapping_positions (tests.test_v020_portfolio.PortfolioSimulationTests.test_h1_and_m1_on_same_symbol_never_hold_overlapping_positions) ... ok
+test_scanner_integration_skips_unselected_symbols (tests.test_v020_portfolio.PortfolioSimulationTests.test_scanner_integration_skips_unselected_symbols) ... ok
+test_scanner_selecting_nothing_is_an_error (tests.test_v020_portfolio.PortfolioSimulationTests.test_scanner_selecting_nothing_is_an_error) ... ok
+test_single_sleeve_equals_standalone_backtest (tests.test_v020_portfolio.PortfolioSimulationTests.test_single_sleeve_equals_standalone_backtest)
+Urutan event begin/end kausal harus menghasilkan hasil IDENTIK dengan run_backtest. ... ok
+test_auto_ranks_by_liquidity_and_volatility_and_applies_filters (tests.test_v020_portfolio.ScannerTests.test_auto_ranks_by_liquidity_and_volatility_and_applies_filters) ... ok
+test_deterministic (tests.test_v020_portfolio.ScannerTests.test_deterministic) ... ok
+test_invalid_mode_rejected (tests.test_v020_portfolio.ScannerTests.test_invalid_mode_rejected) ... ok
+test_manual_whitelist_only_and_filters_still_apply (tests.test_v020_portfolio.ScannerTests.test_manual_whitelist_only_and_filters_still_apply) ... ok
+test_manual_without_symbols_rejected (tests.test_v020_portfolio.ScannerTests.test_manual_without_symbols_rejected) ... ok
+test_spread_filter_requires_known_quote (tests.test_v020_portfolio.ScannerTests.test_spread_filter_requires_known_quote) ... ok
+test_top_n_limits_selection (tests.test_v020_portfolio.ScannerTests.test_top_n_limits_selection) ... ok
+test_daily_loss_blocks_same_day_and_resets_next_utc_day (tests.test_v020_portfolio.SharedRiskTests.test_daily_loss_blocks_same_day_and_resets_next_utc_day) ... ok
+test_duplicate_sleeve_names_rejected (tests.test_v020_portfolio.SharedRiskTests.test_duplicate_sleeve_names_rejected) ... ok
+test_gate_error_fails_closed_in_engine (tests.test_v020_portfolio.SharedRiskTests.test_gate_error_fails_closed_in_engine) ... ok
+test_gate_only_returns_verdict (tests.test_v020_portfolio.SharedRiskTests.test_gate_only_returns_verdict)
+Gerbang hanya mengembalikan (ok, alasan); tidak punya jalur mengubah qty/harga order. ... ok
+test_limits_validation (tests.test_v020_portfolio.SharedRiskTests.test_limits_validation) ... ok
+test_max_open_positions_across_sleeves (tests.test_v020_portfolio.SharedRiskTests.test_max_open_positions_across_sleeves) ... ok
+test_one_position_per_symbol_blocks_second_mode_on_same_symbol (tests.test_v020_portfolio.SharedRiskTests.test_one_position_per_symbol_blocks_second_mode_on_same_symbol) ... ok
+test_portfolio_drawdown_latches_halt (tests.test_v020_portfolio.SharedRiskTests.test_portfolio_drawdown_latches_halt) ... ok
+test_total_exposure_limit (tests.test_v020_portfolio.SharedRiskTests.test_total_exposure_limit) ... ok
+test_two_positions_allowed_on_different_symbols (tests.test_v020_portfolio.SharedRiskTests.test_two_positions_allowed_on_different_symbols) ... ok
+test_connection_refused_raises_dataerror (tests.test_v020_safeguard_wiring.BookTickerFetchTests.test_connection_refused_raises_dataerror) ... ok
+test_http_error_raises_dataerror (tests.test_v020_safeguard_wiring.BookTickerFetchTests.test_http_error_raises_dataerror) ... /data/data/com.termux/files/usr/lib/python3.14/tempfile.py:484: ResourceWarning: Implicitly cleaning up <HTTPError 500: 'Internal Server Error'>
+  _warnings.warn(self.warn_message, ResourceWarning)
+ok
+test_invalid_json_raises_dataerror (tests.test_v020_safeguard_wiring.BookTickerFetchTests.test_invalid_json_raises_dataerror) ... ok
+test_parses_quote (tests.test_v020_safeguard_wiring.BookTickerFetchTests.test_parses_quote) ... ok
+test_invalid_values_rejected (tests.test_v020_safeguard_wiring.ConfigValidationTests.test_invalid_values_rejected) ... ok
+test_default_one_entry_per_hour (tests.test_v020_safeguard_wiring.EntriesPerHourTests.test_default_one_entry_per_hour) ... ok
+test_two_entries_when_allowed (tests.test_v020_safeguard_wiring.EntriesPerHourTests.test_two_entries_when_allowed) ... ok
+test_disabled_by_default (tests.test_v020_safeguard_wiring.MaxHoldTests.test_disabled_by_default) ... ok
+test_not_closed_before_limit (tests.test_v020_safeguard_wiring.MaxHoldTests.test_not_closed_before_limit) ... ok
+test_position_force_closed_at_max_hold (tests.test_v020_safeguard_wiring.MaxHoldTests.test_position_force_closed_at_max_hold) ... ok
+test_stop_has_priority_over_max_hold_on_same_bar (tests.test_v020_safeguard_wiring.MaxHoldTests.test_stop_has_priority_over_max_hold_on_same_bar) ... ok
+test_tp_above_cost_multiple_accepted (tests.test_v020_safeguard_wiring.MinEdgeTests.test_tp_above_cost_multiple_accepted) ... ok
+test_tp_below_cost_multiple_rejected (tests.test_v020_safeguard_wiring.MinEdgeTests.test_tp_below_cost_multiple_rejected) ... ok
+test_backtest_ignores_flag_because_it_has_no_orderbook (tests.test_v020_safeguard_wiring.SpreadGateTests.test_backtest_ignores_flag_because_it_has_no_orderbook) ... ok
+test_check_disabled_by_default_in_paper (tests.test_v020_safeguard_wiring.SpreadGateTests.test_check_disabled_by_default_in_paper) ... ok
+test_crossed_book_blocks_entry (tests.test_v020_safeguard_wiring.SpreadGateTests.test_crossed_book_blocks_entry) ... ok
+test_no_provider_fails_closed (tests.test_v020_safeguard_wiring.SpreadGateTests.test_no_provider_fails_closed) ... ok
+test_provider_exception_fails_closed (tests.test_v020_safeguard_wiring.SpreadGateTests.test_provider_exception_fails_closed) ... ok
+test_provider_returning_none_fails_closed (tests.test_v020_safeguard_wiring.SpreadGateTests.test_provider_returning_none_fails_closed) ... ok
+test_stale_orderbook_blocks_entry (tests.test_v020_safeguard_wiring.SpreadGateTests.test_stale_orderbook_blocks_entry) ... ok
+test_tight_spread_allows_entry (tests.test_v020_safeguard_wiring.SpreadGateTests.test_tight_spread_allows_entry) ... ok
+test_wide_spread_blocks_entry (tests.test_v020_safeguard_wiring.SpreadGateTests.test_wide_spread_blocks_entry) ... ok
+test_stop_never_loosens_on_pullback (tests.test_v020_safeguard_wiring.TrailingStopTests.test_stop_never_loosens_on_pullback) ... ok
+test_stop_ratchets_up_and_locks_profit (tests.test_v020_safeguard_wiring.TrailingStopTests.test_stop_ratchets_up_and_locks_profit) ... ok
+test_trailing_uses_closed_bar_no_lookahead (tests.test_v020_safeguard_wiring.TrailingStopTests.test_trailing_uses_closed_bar_no_lookahead)
+Stop yang digeser di CLOSE bar k hanya berlaku mulai bar k+1 (bukan bar k itu sendiri). ... ok
+test_without_trailing_same_path_loses_back_to_original_stop (tests.test_v020_safeguard_wiring.TrailingStopTests.test_without_trailing_same_path_loses_back_to_original_stop) ... ok
+test_cli_prints_warnings_to_stderr_not_stdout (tests.test_v030_config_warnings.WarningTests.test_cli_prints_warnings_to_stderr_not_stdout) ... ok
+test_default_config_has_no_trailing_warning (tests.test_v030_config_warnings.WarningTests.test_default_config_has_no_trailing_warning) ... ok
+test_m1_example_warns_about_stop_floor_and_trailing_lock (tests.test_v030_config_warnings.WarningTests.test_m1_example_warns_about_stop_floor_and_trailing_lock) ... ok
+test_roundtrip_cost_formula (tests.test_v030_config_warnings.WarningTests.test_roundtrip_cost_formula) ... ok
+test_trailing_that_locks_more_than_costs_does_not_warn (tests.test_v030_config_warnings.WarningTests.test_trailing_that_locks_more_than_costs_does_not_warn) ... ok
+test_acc_never_opens_orders_or_runs_the_cycle (tests.test_v030_dashboard.AccSemanticsTests.test_acc_never_opens_orders_or_runs_the_cycle) ... ok
+test_acc_refused_by_shared_kill_switch (tests.test_v030_dashboard.AccSemanticsTests.test_acc_refused_by_shared_kill_switch) ... ok
+test_acc_refused_on_identity_mismatch (tests.test_v030_dashboard.AccSemanticsTests.test_acc_refused_on_identity_mismatch) ... ok
+test_acc_refused_when_halted (tests.test_v030_dashboard.AccSemanticsTests.test_acc_refused_when_halted) ... ok
+test_acc_without_selection_is_refused (tests.test_v030_dashboard.AccSemanticsTests.test_acc_without_selection_is_refused) ... ok
+test_data_source_failure_is_reported_as_no_data_not_500 (tests.test_v030_dashboard.AccSemanticsTests.test_data_source_failure_is_reported_as_no_data_not_500) ... ok
+test_kill_switch_after_acc_still_blocks_orders_in_pipeline (tests.test_v030_dashboard.AccSemanticsTests.test_kill_switch_after_acc_still_blocks_orders_in_pipeline)
+ACC bukan izin menembus keselamatan: kill switch yang muncul setelah ACC tetap memblok entry. ... ok
+test_manual_selection_then_step_works_without_a_prior_scan (tests.test_v030_dashboard.AccSemanticsTests.test_manual_selection_then_step_works_without_a_prior_scan)
+Regresi: step memanggil now_ms() sebelum data diambil -> TypeError (500) pada DemoFeed tanpa scan. ... ok
+test_step_requires_acc (tests.test_v030_dashboard.AccSemanticsTests.test_step_requires_acc) ... ok
+test_ai_scan_picks_a_coin_and_reports_ranking (tests.test_v030_dashboard.AiScanTests.test_ai_scan_picks_a_coin_and_reports_ranking) ... ok
+test_ai_scan_without_any_eligible_coin_is_an_error (tests.test_v030_dashboard.AiScanTests.test_ai_scan_without_any_eligible_coin_is_an_error) ... ok
+test_ai_scan_without_data_source_is_unavailable (tests.test_v030_dashboard.AiScanTests.test_ai_scan_without_data_source_is_unavailable) ... ok
+test_invalid_coin_list_rejected (tests.test_v030_dashboard.AiScanTests.test_invalid_coin_list_rejected) ... ok
+test_page_script_runs_without_errors_and_buttons_drive_the_api (tests.test_v030_dashboard.DashboardScriptTests.test_page_script_runs_without_errors_and_buttons_drive_the_api) ... skipped 'node tidak tersedia'
+test_foreign_host_header_is_rejected (tests.test_v030_dashboard.HttpSecurityTests.test_foreign_host_header_is_rejected) ... ok
+test_index_is_served_with_security_headers_and_required_controls (tests.test_v030_dashboard.HttpSecurityTests.test_index_is_served_with_security_headers_and_required_controls) ... ok
+test_no_order_endpoint_exists (tests.test_v030_dashboard.HttpSecurityTests.test_no_order_endpoint_exists) ... ok
+test_post_requires_correct_token (tests.test_v030_dashboard.HttpSecurityTests.test_post_requires_correct_token) ... ok
+test_post_validates_content_type_size_and_json (tests.test_v030_dashboard.HttpSecurityTests.test_post_validates_content_type_size_and_json) ... ok
+test_refuses_to_bind_to_non_loopback (tests.test_v030_dashboard.HttpSecurityTests.test_refuses_to_bind_to_non_loopback) ... ok
+test_select_validation_over_http (tests.test_v030_dashboard.HttpSecurityTests.test_select_validation_over_http) ... ok
+test_state_endpoint_reports_paper_and_no_real_money (tests.test_v030_dashboard.HttpSecurityTests.test_state_endpoint_reports_paper_and_no_real_money) ... ok
+test_changing_coin_with_open_position_is_refused_and_otherwise_requires_new_acc (tests.test_v030_dashboard.SeparationAndStatsTests.test_changing_coin_with_open_position_is_refused_and_otherwise_requires_new_acc) ... ok
+test_changing_coin_without_position_disarms (tests.test_v030_dashboard.SeparationAndStatsTests.test_changing_coin_without_position_disarms) ... ok
+test_halt_disarms_after_step (tests.test_v030_dashboard.SeparationAndStatsTests.test_halt_disarms_after_step) ... ok
+test_m1_and_h1_stats_are_independent_and_consistent_with_ledger (tests.test_v030_dashboard.SeparationAndStatsTests.test_m1_and_h1_stats_are_independent_and_consistent_with_ledger) ... ok
+test_rejection_reasons_are_aggregated_from_audit (tests.test_v030_dashboard.SeparationAndStatsTests.test_rejection_reasons_are_aggregated_from_audit) ... ok
+test_selection_persists_but_armed_state_does_not (tests.test_v030_dashboard.SeparationAndStatsTests.test_selection_persists_but_armed_state_does_not) ... ok
+test_h1_paper_matches_backtest (tests.test_v030_data_secrets.BacktestPaperParityTests.test_h1_paper_matches_backtest) ... ok
+test_m1_paper_matches_backtest (tests.test_v030_data_secrets.BacktestPaperParityTests.test_m1_paper_matches_backtest) ... ok
+test_bad_inputs (tests.test_v030_data_secrets.CsvTests.test_bad_inputs) ... ok
+test_duplicates_disorder_and_empty_are_flagged (tests.test_v030_data_secrets.CsvTests.test_duplicates_disorder_and_empty_are_flagged) ... ok
+test_flaky_server_recovers_within_retries (tests.test_v030_data_secrets.FetchFaultTests.test_flaky_server_recovers_within_retries) ... ok
+test_ok_response_parses_and_validates (tests.test_v030_data_secrets.FetchFaultTests.test_ok_response_parses_and_validates) ... ok
+test_returned_but_bad_series_are_flagged_by_validation (tests.test_v030_data_secrets.FetchFaultTests.test_returned_but_bad_series_are_flagged_by_validation) ... <string>:2: ResourceWarning: unclosed <socket.socket [closed] fd=5, family=2, type=1, proto=6>
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_timeout_becomes_dataerror (tests.test_v030_data_secrets.FetchFaultTests.test_timeout_becomes_dataerror) ... ok
+test_transport_and_shape_errors_become_dataerror_after_all_retries (tests.test_v030_data_secrets.FetchFaultTests.test_transport_and_shape_errors_become_dataerror_after_all_retries) ... /data/data/com.termux/files/usr/lib/python3.14/tempfile.py:484: ResourceWarning: Implicitly cleaning up <HTTPError 429: 'Too Many Requests'>
+  _warnings.warn(self.warn_message, ResourceWarning)
+ok
+test_unclosed_last_candle_is_dropped (tests.test_v030_data_secrets.FetchFaultTests.test_unclosed_last_candle_is_dropped) ... ok
+test_bad_feeds_never_reach_the_engine_and_never_write_trading_state (tests.test_v030_data_secrets.FetchToPaperIntegrationTests.test_bad_feeds_never_reach_the_engine_and_never_write_trading_state) ... /data/data/com.termux/files/home/olypahantstrade-audit-20261030-232954/olypahantstrade/tests/test_v030_data_secrets.py:43: ResourceWarning: unclosed <socket.socket [closed] fd=5, family=2, type=1, proto=6>
+  "REVERSED": lambda: rows(BASE[::-1]), "SHORTROW": lambda: [r[:3] for r in rows(BASE)],
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_good_feed_runs_full_cycle (tests.test_v030_data_secrets.FetchToPaperIntegrationTests.test_good_feed_runs_full_cycle) ... ok
+test_open_candle_is_not_processed (tests.test_v030_data_secrets.FetchToPaperIntegrationTests.test_open_candle_is_not_processed) ... ok
+test_clean_zip_passes (tests.test_v030_data_secrets.PackageCheckTests.test_clean_zip_passes) ... ok
+test_forbidden_items_are_all_detected (tests.test_v030_data_secrets.PackageCheckTests.test_forbidden_items_are_all_detected) ... ok
+test_audit_file_never_contains_a_token_even_inside_error_text (tests.test_v030_data_secrets.SecretHandlingTests.test_audit_file_never_contains_a_token_even_inside_error_text) ... ok
+test_redaction_by_key_and_by_text_pattern (tests.test_v030_data_secrets.SecretHandlingTests.test_redaction_by_key_and_by_text_pattern) ... ok
+test_repository_contains_no_secrets_and_ignores_env (tests.test_v030_data_secrets.SecretHandlingTests.test_repository_contains_no_secrets_and_ignores_env) ... ok
+test_disabled_missing_or_placeholder_credentials_make_no_network_call (tests.test_v030_data_secrets.TelegramTests.test_disabled_missing_or_placeholder_credentials_make_no_network_call) ... ok
+test_engine_survives_a_notifier_that_raises (tests.test_v030_data_secrets.TelegramTests.test_engine_survives_a_notifier_that_raises) ... ok
+test_failures_return_false_and_never_print_the_token (tests.test_v030_data_secrets.TelegramTests.test_failures_return_false_and_never_print_the_token) ... /data/data/com.termux/files/usr/lib/python3.14/tempfile.py:484: ResourceWarning: Implicitly cleaning up <HTTPError 401: 'Unauthorized'>
+  _warnings.warn(self.warn_message, ResourceWarning)
+ok
+test_notifier_is_send_only_no_receive_or_command_capability (tests.test_v030_data_secrets.TelegramTests.test_notifier_is_send_only_no_receive_or_command_capability) ... ok
+test_success_sends_plain_message_only (tests.test_v030_data_secrets.TelegramTests.test_success_sends_plain_message_only) ... ok
+test_report_flags_bad_feed_and_passes_good_one (tests.test_v030_data_secrets.VerifyLiveDataScriptTests.test_report_flags_bad_feed_and_passes_good_one) ... ok
+test_examples_use_distinct_state_dirs_and_modes (tests.test_v030_isolation.ConfigSeparationTests.test_examples_use_distinct_state_dirs_and_modes) ... ok
+test_halt_in_m1_does_not_halt_h1_and_recovery_leaves_h1_untouched (tests.test_v030_isolation.HaltCooldownRecoveryIsolationTests.test_halt_in_m1_does_not_halt_h1_and_recovery_leaves_h1_untouched) ... ok
+test_local_kill_switch_stops_only_its_mode_and_shared_kill_stops_both (tests.test_v030_isolation.HaltCooldownRecoveryIsolationTests.test_local_kill_switch_stops_only_its_mode_and_shared_kill_stops_both) ... ok
+test_loss_streak_and_cooldown_do_not_leak (tests.test_v030_isolation.HaltCooldownRecoveryIsolationTests.test_loss_streak_and_cooldown_do_not_leak) ... /data/data/com.termux/files/usr/lib/python3.14/json/encoder.py:426: ResourceWarning: unclosed <socket.socket [closed] fd=5, family=2, type=1, proto=6>
+  def _iterencode(o, _current_indent_level):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/data/data/com.termux/files/usr/lib/python3.14/json/encoder.py:426: ResourceWarning: unclosed <socket.socket [closed] fd=7, family=2, type=1, proto=6>
+  def _iterencode(o, _current_indent_level):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_shared_kill_switch_blocks_new_entries_in_both_modes (tests.test_v030_isolation.HaltCooldownRecoveryIsolationTests.test_shared_kill_switch_blocks_new_entries_in_both_modes) ... ok
+test_corrupt_identity_file_is_refused (tests.test_v030_isolation.IdentityConflictTests.test_corrupt_identity_file_is_refused) ... ok
+test_different_symbol_or_interval_in_same_dir_is_refused (tests.test_v030_isolation.IdentityConflictTests.test_different_symbol_or_interval_in_same_dir_is_refused) ... ok
+test_legacy_state_without_identity_is_refused_until_adopted (tests.test_v030_isolation.IdentityConflictTests.test_legacy_state_without_identity_is_refused_until_adopted) ... ok
+test_recovery_refuses_on_identity_mismatch (tests.test_v030_isolation.IdentityConflictTests.test_recovery_refuses_on_identity_mismatch) ... ok
+test_same_state_dir_for_two_modes_is_refused_without_writing (tests.test_v030_isolation.IdentityConflictTests.test_same_state_dir_for_two_modes_is_refused_without_writing) ... ok
+test_restart_keeps_open_simulated_position (tests.test_v030_isolation.RestartTests.test_restart_keeps_open_simulated_position) ... ok
+test_restart_replaying_same_window_does_not_duplicate_trades (tests.test_v030_isolation.RestartTests.test_restart_replaying_same_window_does_not_duplicate_trades) ... ok
+test_alternating_equals_separate_runs (tests.test_v030_isolation.StateSeparationTests.test_alternating_equals_separate_runs) ... ok
+test_concurrent_threads_equal_separate_runs (tests.test_v030_isolation.StateSeparationTests.test_concurrent_threads_equal_separate_runs) ... 
