@@ -269,4 +269,92 @@ test_same_state_dir_for_two_modes_is_refused_without_writing (tests.test_v030_is
 test_restart_keeps_open_simulated_position (tests.test_v030_isolation.RestartTests.test_restart_keeps_open_simulated_position) ... ok
 test_restart_replaying_same_window_does_not_duplicate_trades (tests.test_v030_isolation.RestartTests.test_restart_replaying_same_window_does_not_duplicate_trades) ... ok
 test_alternating_equals_separate_runs (tests.test_v030_isolation.StateSeparationTests.test_alternating_equals_separate_runs) ... ok
-test_concurrent_threads_equal_separate_runs (tests.test_v030_isolation.StateSeparationTests.test_concurrent_threads_equal_separate_runs) ... 
+test_concurrent_threads_equal_separate_runs (tests.test_v030_isolation.StateSeparationTests.test_concurrent_threads_equal_separate_runs) ... ok
+test_demo_balances_are_independent (tests.test_v030_isolation.StateSeparationTests.test_demo_balances_are_independent) ... ok
+test_each_mode_has_own_files_identity_and_ledger (tests.test_v030_isolation.StateSeparationTests.test_each_mode_has_own_files_identity_and_ledger) ... ok
+test_running_one_mode_never_changes_the_other_modes_files (tests.test_v030_isolation.StateSeparationTests.test_running_one_mode_never_changes_the_other_modes_files) ... ok
+test_cost_per_side_matches_config (tests.test_v030_m1_audit.CostRecomputationTests.test_cost_per_side_matches_config)
+Karakterisasi: 0,5 bps (setengah spread) + 1 bps (slippage) per sisi; fee 0,075% per sisi. ... ok
+test_equity_reconciles_with_trade_ledger (tests.test_v030_m1_audit.CostRecomputationTests.test_equity_reconciles_with_trade_ledger) ... ok
+test_every_trade_recomputes_exactly_from_first_principles (tests.test_v030_m1_audit.CostRecomputationTests.test_every_trade_recomputes_exactly_from_first_principles) ... ok
+test_exit_prices_follow_the_documented_model (tests.test_v030_m1_audit.CostRecomputationTests.test_exit_prices_follow_the_documented_model) ... ok
+test_zero_cost_world_has_net_equal_gross (tests.test_v030_m1_audit.CostRecomputationTests.test_zero_cost_world_has_net_equal_gross) ... ok
+test_gap_through_stop_fills_at_open_not_at_stop (tests.test_v030_m1_audit.FillModelCharacterizationTests.test_gap_through_stop_fills_at_open_not_at_stop) ... ok
+test_stop_wins_when_stop_and_tp_both_touched_in_same_bar (tests.test_v030_m1_audit.FillModelCharacterizationTests.test_stop_wins_when_stop_and_tp_both_touched_in_same_bar)
+PESIMIS: bila stop dan TP sama-sama tersentuh dalam satu candle, stop dianggap lebih dulu. ... ok
+test_take_profit_fills_on_touch_at_exact_price_without_slippage (tests.test_v030_m1_audit.FillModelCharacterizationTests.test_take_profit_fills_on_touch_at_exact_price_without_slippage)
+OPTIMIS: limit TP dianggap terisi saat harga HANYA menyentuh (tanpa antrean/trade-through). ... ok
+test_quantity_follows_lot_rules_and_caps (tests.test_v030_m1_audit.LotAndSizingTests.test_quantity_follows_lot_rules_and_caps) ... ok
+test_quantity_is_floored_never_rounded_up (tests.test_v030_m1_audit.LotAndSizingTests.test_quantity_is_floored_never_rounded_up) ... ok
+test_changing_future_candles_does_not_change_past_signals (tests.test_v030_m1_audit.NoLookaheadTests.test_changing_future_candles_does_not_change_past_signals) ... ok
+test_signal_at_i_uses_only_data_up_to_i (tests.test_v030_m1_audit.NoLookaheadTests.test_signal_at_i_uses_only_data_up_to_i) ... ok
+test_entry_is_at_open_of_the_bar_after_the_signal_bar (tests.test_v030_m1_audit.TimestampAndFillConventionTests.test_entry_is_at_open_of_the_bar_after_the_signal_bar) ... ok
+test_every_approved_order_is_either_filled_or_vetoed_by_a_later_stage (tests.test_v030_m1_audit.TimestampAndFillConventionTests.test_every_approved_order_is_either_filled_or_vetoed_by_a_later_stage) ... ok
+test_exit_ts_never_before_entry_ts (tests.test_v030_m1_audit.TimestampAndFillConventionTests.test_exit_ts_never_before_entry_ts) ... ok
+test_signal_uses_closed_bar_values (tests.test_v030_m1_audit.TimestampAndFillConventionTests.test_signal_uses_closed_bar_values) ... ok
+test_cooldown_starts_when_third_loss_closes_not_at_next_signal (tests.test_v030_pipeline.CooldownAnchoringTests.test_cooldown_starts_when_third_loss_closes_not_at_next_signal) ... ok
+test_engine_scenario_independent_of_intervening_rejected_signals (tests.test_v030_pipeline.CooldownAnchoringTests.test_engine_scenario_independent_of_intervening_rejected_signals) ... ok
+test_late_first_check_does_not_extend_cooldown (tests.test_v030_pipeline.CooldownAnchoringTests.test_late_first_check_does_not_extend_cooldown) ... ok
+test_rejected_submit_is_not_retried_and_halts (tests.test_v030_pipeline.DuplicateAndRetryTests.test_rejected_submit_is_not_retried_and_halts) ... ok
+test_replayed_begin_bar_does_not_open_second_position (tests.test_v030_pipeline.DuplicateAndRetryTests.test_replayed_begin_bar_does_not_open_second_position) ... ok
+test_same_order_id_is_idempotent_at_adapter (tests.test_v030_pipeline.DuplicateAndRetryTests.test_same_order_id_is_idempotent_at_adapter) ... ok
+test_invalid_levels_are_vetoed_with_specific_reason (tests.test_v030_pipeline.InvalidStopTakeProfitTests.test_invalid_levels_are_vetoed_with_specific_reason) ... ok
+test_non_finite_or_missing_stop_is_vetoed (tests.test_v030_pipeline.InvalidStopTakeProfitTests.test_non_finite_or_missing_stop_is_vetoed) ... ok
+test_approved_order_passes_every_stage_in_order (tests.test_v030_pipeline.PipelineOrderTests.test_approved_order_passes_every_stage_in_order) ... ok
+test_declared_order_constant (tests.test_v030_pipeline.PipelineOrderTests.test_declared_order_constant) ... ok
+test_halt_appearing_during_pipeline_is_caught_by_final_check (tests.test_v030_pipeline.PipelineOrderTests.test_halt_appearing_during_pipeline_is_caught_by_final_check) ... ok
+test_halt_latched_after_signal_stops_everything_at_stage_one (tests.test_v030_pipeline.PipelineOrderTests.test_halt_latched_after_signal_stops_everything_at_stage_one) ... ok
+test_kill_switch_created_during_pipeline_is_caught_by_final_check (tests.test_v030_pipeline.PipelineOrderTests.test_kill_switch_created_during_pipeline_is_caught_by_final_check) ... ok
+test_order_not_signed_by_risk_engine_cannot_be_executed (tests.test_v030_pipeline.PipelineOrderTests.test_order_not_signed_by_risk_engine_cannot_be_executed) ... ok
+test_portfolio_veto_stops_before_execution (tests.test_v030_pipeline.PipelineOrderTests.test_portfolio_veto_stops_before_execution) ... ok
+test_risk_veto_stops_pipeline_before_safeguard_and_execution (tests.test_v030_pipeline.PipelineOrderTests.test_risk_veto_stops_pipeline_before_safeguard_and_execution) ... ok
+test_safeguard_veto_stops_before_portfolio_and_execution (tests.test_v030_pipeline.PipelineOrderTests.test_safeguard_veto_stops_before_portfolio_and_execution) ... ok
+test_daily_loss_limit_blocks_further_entries_same_day (tests.test_v030_pipeline.RiskLimitTests.test_daily_loss_limit_blocks_further_entries_same_day) ... ok
+test_drawdown_limit_latches_halt_and_stops_everything (tests.test_v030_pipeline.RiskLimitTests.test_drawdown_limit_latches_halt_and_stops_everything) ... ok
+test_loss_per_trade_is_bounded_by_risk_budget (tests.test_v030_pipeline.RiskLimitTests.test_loss_per_trade_is_bounded_by_risk_budget) ... ok
+test_position_never_exceeds_notional_cap (tests.test_v030_pipeline.RiskLimitTests.test_position_never_exceeds_notional_cap) ... ok
+test_full_trade_walks_the_state_machine_in_order (tests.test_v030_pipeline.StateMachineIntegrationTests.test_full_trade_walks_the_state_machine_in_order) ... ok
+test_illegal_transition_halts_fail_closed (tests.test_v030_pipeline.StateMachineIntegrationTests.test_illegal_transition_halts_fail_closed) ... ok
+test_kill_switch_becomes_machine_failure_and_blocks_then_clears (tests.test_v030_pipeline.StateMachineIntegrationTests.test_kill_switch_becomes_machine_failure_and_blocks_then_clears) ... ok
+test_unknown_order_status_moves_machine_to_reconciling_and_blocks_entries (tests.test_v030_pipeline.StateMachineIntegrationTests.test_unknown_order_status_moves_machine_to_reconciling_and_blocks_entries) ... ok
+test_vetoed_signal_returns_to_ready (tests.test_v030_pipeline.StateMachineIntegrationTests.test_vetoed_signal_returns_to_ready) ... ok
+test_inconsistent_machine_state_is_refused (tests.test_v030_pipeline.StateMachinePersistenceTests.test_inconsistent_machine_state_is_refused) ... ok
+test_legacy_v4_state_without_machine_state_is_accepted (tests.test_v030_pipeline.StateMachinePersistenceTests.test_legacy_v4_state_without_machine_state_is_accepted) ... ok
+test_machine_state_is_persisted_and_restored_with_open_position (tests.test_v030_pipeline.StateMachinePersistenceTests.test_machine_state_is_persisted_and_restored_with_open_position) ... ok
+test_position_state_without_position_is_refused (tests.test_v030_pipeline.StateMachinePersistenceTests.test_position_state_without_position_is_refused) ... ok
+test_reconciling_survives_restart_and_recovery_returns_to_ready (tests.test_v030_pipeline.StateMachinePersistenceTests.test_reconciling_survives_restart_and_recovery_returns_to_ready) ... ok
+test_no_secrets_in_source (tests.test_wallet_and_architecture.TestArchitecture.test_no_secrets_in_source) ... ok
+test_only_risk_creates_approved_orders (tests.test_wallet_and_architecture.TestArchitecture.test_only_risk_creates_approved_orders) ... ok
+test_strategy_and_indicators_isolated (tests.test_wallet_and_architecture.TestArchitecture.test_strategy_and_indicators_isolated) ... ok
+
+======================================================================
+FAIL: test_h1_golden_hash (tests.test_v020_modes.H1StrategyTests.test_h1_golden_hash)
+Regresi: berubah hanya bila logika H1/engine/risk berubah (sengaja).
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/olypahantstrade-audit-20261030-232954/olypahantstrade/tests/test_v020_modes.py", line 83, in test_h1_golden_hash
+    self.assertEqual(r.result_hash[:12], "7b023b2cfc65")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'f1f9915dbd13' != '7b023b2cfc65'
+- f1f9915dbd13
++ 7b023b2cfc65
+
+
+======================================================================
+FAIL: test_mtf_golden_result (tests.test_v020_modes.LegacyModeRegressionTests.test_mtf_golden_result)
+Regresi. v4: hash 739d19906c93 (83 trade, +10,1998%). v0.3.0: 3d93f705f0b2 (83 trade, +10,2189%).
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/olypahantstrade-audit-20261030-232954/olypahantstrade/tests/test_v020_modes.py", line 139, in test_mtf_golden_result
+    self.assertEqual(r.result_hash[:12], "3d93f705f0b2")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ecc856b43080' != '3d93f705f0b2'
+- ecc856b43080
++ 3d93f705f0b2
+
+
+----------------------------------------------------------------------
+Ran 296 tests in 229.989s
+
+FAILED (failures=2, skipped=1)
+[Telegram] Notifications disabled.
