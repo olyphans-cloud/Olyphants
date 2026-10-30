@@ -1,0 +1,4 @@
+Laporan otomatis Termux
+Waktu: 2026-10-30 23:16:14 WIB
+Branch: docs/adaptive-atr-trailing-stop
+Commit: 8c84af6
