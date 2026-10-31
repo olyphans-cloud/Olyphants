@@ -145,3 +145,21 @@ fatal: unable to access 'https://github.com/olyphans-cloud/Olyphants.git/': Coul
   },
   "counters": {}
 }
+=== 2026-10-31T13:45:20Z ===
+{
+  "status": "ok",
+  "processed_bars": 0,
+  "last_ts": 1793433600000,
+  "gap_missed_bars": 0,
+  "equity": 1000.0,
+  "position": null,
+  "halted": false,
+  "safeguard": {
+    "halted": false,
+    "halt_reason": null,
+    "loss_streak": 0,
+    "cooldown_remaining_sec": 0.0,
+    "max_spread_pct": 0.15
+  },
+  "counters": {}
+}
