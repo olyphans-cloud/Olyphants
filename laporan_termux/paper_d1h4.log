@@ -1,21 +1,3 @@
-  "error": "paper-step lain sedang berjalan; langkah ini dilewati"
-}
-=== 2026-10-31T12:32:13Z ===
-{
-  "status": "ok",
-  "processed_bars": 0,
-  "last_ts": 1793433600000,
-  "gap_missed_bars": 0,
-  "equity": 1000.0,
-  "position": null,
-  "halted": false,
-  "safeguard": {
-    "halted": false,
-    "halt_reason": null,
-    "loss_streak": 0,
-    "cooldown_remaining_sec": 0.0,
-    "max_spread_pct": 0.15
-  },
   "counters": {}
 }
 === 2026-10-31T12:45:20Z ===
@@ -381,6 +363,24 @@
   "counters": {}
 }
 === 2026-10-31T18:45:20Z ===
+{
+  "status": "ok",
+  "processed_bars": 0,
+  "last_ts": 1793448000000,
+  "gap_missed_bars": 0,
+  "equity": 1000.0,
+  "position": null,
+  "halted": false,
+  "safeguard": {
+    "halted": false,
+    "halt_reason": null,
+    "loss_streak": 0,
+    "cooldown_remaining_sec": 0.0,
+    "max_spread_pct": 0.15
+  },
+  "counters": {}
+}
+=== 2026-10-31T19:00:20Z ===
 {
   "status": "ok",
   "processed_bars": 0,
