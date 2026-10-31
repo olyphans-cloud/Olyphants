@@ -1,21 +1,3 @@
-{
-  "status": "no_data",
-  "error": "DataError: gagal mengambil klines setelah 3 percobaan: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)>"
-}
-=== 2026-10-31T10:15:05Z ===
-{
-  "status": "no_data",
-  "error": "DataError: gagal mengambil klines setelah 3 percobaan: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)>"
-}
-=== 2026-10-31T10:30:20Z ===
-{
-  "status": "no_data",
-  "error": "DataError: gagal mengambil klines setelah 3 percobaan: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'fapi.binance.com'. (_ssl.c:1082)>"
-}
-=== 2026-10-31T10:45:20Z ===
-{
-  "status": "no_data",
-  "error": "DataError: gagal mengambil klines setelah 3 percobaan: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'fapi.binance.com'. (_ssl.c:1082)>"
 }
 === 2026-10-31T11:00:20Z ===
 {
@@ -381,6 +363,24 @@ fatal: unable to access 'https://github.com/olyphans-cloud/Olyphants.git/': Coul
   "counters": {}
 }
 === 2026-10-31T18:00:20Z ===
+{
+  "status": "ok",
+  "processed_bars": 0,
+  "last_ts": 1793448000000,
+  "gap_missed_bars": 0,
+  "equity": 1000.0,
+  "position": null,
+  "halted": false,
+  "safeguard": {
+    "halted": false,
+    "halt_reason": null,
+    "loss_streak": 0,
+    "cooldown_remaining_sec": 0.0,
+    "max_spread_pct": 0.15
+  },
+  "counters": {}
+}
+=== 2026-10-31T18:15:20Z ===
 {
   "status": "ok",
   "processed_bars": 0,
