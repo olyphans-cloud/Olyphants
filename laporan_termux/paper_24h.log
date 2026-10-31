@@ -4,3 +4,13 @@ PERINGATAN KONFIGURASI: min_stop_distance_pct (0.2%) lebih kecil dari biaya pula
   "status": "no_data",
   "error": "DataError: gagal mengambil klines setelah 3 percobaan: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'api.binance.com'. (_ssl.c:1082)>"
 }
+remote: 
+remote: Create a pull request for 'termux-laporan' on GitHub by visiting:        
+remote:      https://github.com/olyphans-cloud/Olyphants/pull/new/termux-laporan        
+remote: 
+=== 2026-10-31T03:30:15Z ===
+PERINGATAN KONFIGURASI: min_stop_distance_pct (0.2%) lebih kecil dari biaya pulang-pergi (0.280%): stop bisa lebih sempit dari biaya; kerugian per stop >= biaya + jarak stop
+{
+  "status": "no_data",
+  "error": "DataError: gagal mengambil klines setelah 3 percobaan: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)>"
+}
