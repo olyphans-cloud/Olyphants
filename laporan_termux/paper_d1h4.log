@@ -23,3 +23,9 @@
   "status": "no_data",
   "error": "DataError: gagal mengambil klines setelah 3 percobaan: <urlopen error [Errno 7] No address associated with hostname>"
 }
+fatal: unable to access 'https://github.com/olyphans-cloud/Olyphants.git/': Could not resolve host: github.com
+=== 2026-10-31T11:15:20Z ===
+{
+  "status": "no_data",
+  "error": "DataError: gagal mengambil klines setelah 3 percobaan: <urlopen error [Errno 104] Connection reset by peer>"
+}
