@@ -13,3 +13,8 @@
   "status": "no_data",
   "error": "DataError: gagal mengambil klines setelah 3 percobaan: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'fapi.binance.com'. (_ssl.c:1082)>"
 }
+=== 2026-10-31T10:45:20Z ===
+{
+  "status": "no_data",
+  "error": "DataError: gagal mengambil klines setelah 3 percobaan: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'fapi.binance.com'. (_ssl.c:1082)>"
+}
