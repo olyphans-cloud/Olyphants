@@ -1,7 +1,7 @@
 Laporan otomatis Termux
-Waktu: 2026-11-01 14:50:07 WIB
+Waktu: 2026-11-01 15:00:05 WIB
 Branch lokal: integrasi-robot-20261031
 Branch GitHub: docs/adaptive-atr-trailing-stop
-Commit: 6ca3186
+Commit: eb3f30d
 DNS: berhasil
 GitHub fetch: berhasil
