@@ -1,24 +1,3 @@
-  "processed_bars": 0,
-  "last_ts": 1793606400000,
-  "gap_missed_bars": 0,
-  "equity": 1000.0,
-  "position": null,
-  "halted": false,
-  "safeguard": {
-    "halted": false,
-    "halt_reason": null,
-    "loss_streak": 0,
-    "cooldown_remaining_sec": 0.0,
-    "max_spread_pct": 0.15
-  },
-  "counters": {}
-}
-=== 2026-11-02T14:45:20Z ===
-{
-  "status": "ok",
-  "processed_bars": 0,
-  "last_ts": 1793606400000,
-  "gap_missed_bars": 0,
   "equity": 1000.0,
   "position": null,
   "halted": false,
@@ -397,4 +376,25 @@
 {
   "status": "no_data",
   "error": "DataError: gagal mengambil klines setelah 3 percobaan: <urlopen error [Errno 7] No address associated with hostname>"
+}
+fatal: unable to access 'https://github.com/olyphans-cloud/Olyphants.git/': Could not resolve host: github.com
+=== 2026-11-02T20:15:20Z ===
+{
+  "status": "ok",
+  "processed_bars": 1,
+  "last_ts": 1793635200000,
+  "gap_missed_bars": 0,
+  "equity": 1000.0,
+  "position": null,
+  "halted": false,
+  "safeguard": {
+    "halted": false,
+    "halt_reason": null,
+    "loss_streak": 0,
+    "cooldown_remaining_sec": 0.0,
+    "max_spread_pct": 0.15
+  },
+  "counters": {
+    "no_trade:tidak_ada_setup": 1
+  }
 }
