@@ -1,0 +1,36 @@
+{
+  "mode": "BACKTEST",
+  "symbol": "BTCUSDT",
+  "interval": "1h",
+  "strategy_mode": "h1_trend",
+  "initial_equity": 1000.0,
+  "risk": {
+    "risk_per_trade_pct": 0.5,
+    "max_notional_pct_of_equity": 100.0,
+    "max_daily_loss_pct": 2.0,
+    "max_drawdown_pct": 10.0,
+    "max_open_positions": 1,
+    "min_stop_distance_pct": 0.2,
+    "max_stop_distance_pct": 5.0,
+    "max_data_age_seconds": 900,
+    "max_signal_age_bars": 1,
+    "allow_short": false,
+    "max_loss_streak": 3,
+    "loss_streak_cooldown_sec": 21600,
+    "max_entries_per_hour": 1,
+    "max_hold_sec": 259200,
+    "trailing_trail_pct": 0.0,
+    "require_spread_check": false,
+    "max_spread_pct": 0.15
+  },
+  "strategy": {
+    "ema_fast": 20,
+    "ema_slow": 50,
+    "rsi_period": 14,
+    "atr_period": 14,
+    "atr_stop_mult": 2.0,
+    "reward_risk": 2.0
+  },
+  "state_dir": "state/h1",
+  "shared_kill_switch_file": "state/KILL_ALL"
+}

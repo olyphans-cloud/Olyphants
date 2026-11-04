@@ -1,0 +1,23 @@
+{
+  "mode": "BACKTEST",
+  "symbol": "BTCUSDT",
+  "interval": "15m",
+  "strategy_mode": "mtf_1h_30m_15m",
+  "initial_equity": 1000.0,
+  "risk": {
+    "risk_per_trade_pct": 0.5,
+    "max_notional_pct_of_equity": 100.0,
+    "max_daily_loss_pct": 2.0,
+    "max_drawdown_pct": 10.0,
+    "max_open_positions": 1,
+    "min_stop_distance_pct": 0.2,
+    "max_stop_distance_pct": 5.0,
+    "max_data_age_seconds": 900,
+    "max_signal_age_bars": 1,
+    "allow_short": false,
+    "max_loss_streak": 3,
+    "loss_streak_cooldown_sec": 14400
+  },
+  "state_dir": "state/mtf",
+  "shared_kill_switch_file": "state/KILL_ALL"
+}

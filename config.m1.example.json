@@ -1,0 +1,49 @@
+{
+  "mode": "BACKTEST",
+  "symbol": "BTCUSDT",
+  "interval": "1m",
+  "strategy_mode": "m1_scalp",
+  "initial_equity": 1000.0,
+  "costs": {
+    "fee_rate": 0.00075,
+    "spread_bps": 1.0,
+    "slippage_bps": 1.0
+  },
+  "risk": {
+    "risk_per_trade_pct": 0.25,
+    "max_notional_pct_of_equity": 100.0,
+    "max_daily_loss_pct": 1.5,
+    "max_drawdown_pct": 8.0,
+    "max_open_positions": 1,
+    "min_stop_distance_pct": 0.05,
+    "max_stop_distance_pct": 1.0,
+    "max_data_age_seconds": 90,
+    "max_signal_age_bars": 1,
+    "allow_short": false,
+    "max_loss_streak": 3,
+    "loss_streak_cooldown_sec": 1800,
+    "max_entries_per_hour": 4,
+    "max_hold_sec": 1800,
+    "trailing_trail_pct": 0.12,
+    "trailing_activation_pct": 0.15,
+    "require_spread_check": true,
+    "max_spread_pct": 0.03,
+    "max_orderbook_age_sec": 3.0,
+    "min_edge_cost_mult": 2.0
+  },
+  "strategy": {
+    "ema_fast": 9,
+    "ema_slow": 21,
+    "rsi_period": 14,
+    "atr_period": 14,
+    "atr_stop_mult": 2.0,
+    "reward_risk": 3.0,
+    "rsi_long_min": 45.0,
+    "rsi_long_max": 70.0,
+    "rsi_short_min": 30.0,
+    "rsi_short_max": 55.0,
+    "min_atr_pct": 0.04
+  },
+  "state_dir": "state/m1",
+  "shared_kill_switch_file": "state/KILL_ALL"
+}

@@ -1,0 +1,12 @@
+{
+  "_catatan": "Data 'synthetic' hanya untuk uji mesin. Ganti dengan \"csv\": \"BTCUSDT_1h.csv\" untuk data nyata.",
+  "limits": {"max_open_positions": 2, "max_positions_per_symbol": 1, "max_total_exposure_pct": 100.0,
+             "max_daily_loss_pct": 3.0, "max_drawdown_pct": 15.0},
+  "scan": {"mode": "auto", "top_n": 2, "lookback_bars": 96, "min_avg_quote_volume": 0.0, "max_data_age_bars": 2},
+  "sleeves": [
+    {"name": "H1-BTC", "config": "config.h1.example.json", "symbol": "BTCUSDT",
+     "synthetic": {"n": 1500, "seed": 1, "start_price": 30000}},
+    {"name": "H1-ETH", "config": "config.h1.example.json", "symbol": "ETHUSDT",
+     "synthetic": {"n": 1500, "seed": 2, "start_price": 2000}}
+  ]
+}
