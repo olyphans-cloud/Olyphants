@@ -1,0 +1,40 @@
+# Environment dan kredensial
+.env
+.env.*
+!.env.example
+config.active.json
+*.pem
+*.key
+credentials*.json
+secrets*.json
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+
+# Runtime dan status robot
+state/*
+!state/.gitkeep
+logs/
+*.log
+*.sqlite
+*.sqlite3
+*.db
+
+# File sementara
+*.tmp
+*.bak
+.DS_Store
+
+
+# Backup lokal; jangan ikut repository
+*.backup
+*.backup-*
+*.backup_*
+*.before_*
+*.old
+*.orig
