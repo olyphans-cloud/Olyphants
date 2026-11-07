@@ -11,17 +11,110 @@
 .card{background:var(--panel);border:1px solid var(--line);border-radius:19px;padding:16px;margin-bottom:13px}.label{font-size:11px;color:var(--muted);letter-spacing:1px;font-weight:700}.balance{font-size:28px;font-weight:800;margin:4px 0 13px}.metrics{display:grid;grid-template-columns:1fr 1fr;gap:12px;border-top:1px solid var(--line);padding-top:12px}.metric b{display:block;font-size:18px;margin-top:2px}.metric small{color:var(--muted);font-size:12px}
 .tabs{display:grid;grid-template-columns:1fr 1fr;gap:7px;background:#0e1826;padding:5px;border-radius:13px;margin-top:12px}.tabs button{border:0;background:transparent;color:var(--muted);padding:10px;border-radius:10px;font-weight:700}.tabs button.active{background:#176e63;color:white}.row{display:flex;align-items:center;justify-content:space-between;gap:10px}.select{border:1px solid var(--line);background:var(--panel2);color:var(--text);border-radius:10px;padding:8px 10px;font-weight:700}.statusline{display:flex;gap:10px;align-items:center;margin-top:13px}.dot{width:8px;height:8px;background:var(--teal);border-radius:50%;box-shadow:0 0 0 4px #1b3b37}.muted{color:var(--muted)}.sectionhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-weight:800}.sectionhead span{font-size:11px;color:var(--muted);font-weight:600}.empty{padding:18px 8px;text-align:center;color:var(--muted)}.empty .symbol{font-size:25px;margin-bottom:7px}
 .actions{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.action{border:1px solid var(--line);background:var(--panel2);border-radius:14px;padding:13px 5px;text-align:center;color:var(--text);font-weight:700;font-size:12px}.action .ico{display:block;font-size:21px;margin-bottom:5px;color:#5bd6ba}.nav{position:sticky;bottom:8px;background:#101b2aee;border:1px solid var(--line);backdrop-filter:blur(12px);border-radius:17px;padding:9px 4px;display:grid;grid-template-columns:repeat(4,1fr);margin-top:17px}.nav button{border:0;background:none;color:var(--muted);font-size:10px;padding:5px 0}.nav button.active{color:#59d5b7}.nav .ico{display:block;font-size:18px;margin-bottom:2px}.notice{font-size:11px;color:var(--muted);text-align:center;margin:13px 5px 0}
-</style></head><body>
-<header class="top"><div class="logo">O</div><div class="brand"><strong>OLYPHANTS</strong><div class="sub">Telegram Mini App · Trading workspace</div></div><div class="pill">PAPER</div></header>
+</style>
+<style>
+/* OLYPHANTS_GREEN_UI_PATCH */
+:root {
+  color-scheme: dark;
+  --oly-green: #20c997;
+  --oly-green-soft: #123b31;
+  --oly-bg: #07130f;
+  --oly-card: #10221b;
+  --oly-border: #244638;
+  --oly-text: #e7f5ed;
+  --oly-muted: #9ab5a6;
+}
+
+html, body {
+  background: var(--oly-bg) !important;
+  color: var(--oly-text) !important;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif !important;
+}
+
+header, nav, section, article, main,
+.card, .panel, .box, .stat, .status,
+[class*="card"], [class*="panel"] {
+  border-color: var(--oly-border) !important;
+}
+
+.card, .panel, .box, article,
+[class*="card"], [class*="panel"] {
+  background-color: var(--oly-card) !important;
+  border-radius: 16px !important;
+}
+
+button, .button, [role="button"] {
+  border-radius: 12px !important;
+  transition: opacity .15s ease, transform .15s ease;
+}
+
+button:active, .button:active, [role="button"]:active {
+  transform: scale(.98);
+}
+
+button:not([disabled]), .button,
+button.primary, .btn-primary {
+  border-color: var(--oly-green) !important;
+}
+
+button.primary, .btn-primary {
+  background: var(--oly-green-soft) !important;
+  color: #b9ffe5 !important;
+}
+
+input, select, textarea {
+  background: #091912 !important;
+  color: var(--oly-text) !important;
+  border-color: var(--oly-border) !important;
+  border-radius: 10px !important;
+}
+
+.active, .selected, [aria-pressed="true"] {
+  border-color: var(--oly-green) !important;
+  color: #8fffd0 !important;
+}
+
+small, .muted, .subtitle {
+  color: var(--oly-muted) !important;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  button, .button, [role="button"] {
+    min-height: 42px;
+  }
+}
+</style>
+
+</head><body>
+<header class="top"><div class="logo">O</div><div class="brand"><strong>OLYPHANTS</strong><div class="sub">Dashboard lokal · Tokocrypto PAPER</div></div><div class="pill">PAPER</div></header>
 <section class="card" id="telegramNotice" style="display:none"><div class="label">TELEGRAM MINI APP</div><div id="tgStatus" style="margin-top:5px">Memuat konteks Telegram…</div></section>
-<section class="card"><div class="row"><div><div class="label">MODE TRADING</div><strong id="modeLabel">Futures</strong></div><div class="pill">SIMULASI</div></div><div class="tabs"><button data-mode="Spot">Spot</button><button data-mode="Futures" class="active">Futures</button></div><div class="row" style="margin-top:14px"><span class="muted">Strategi aktif</span><select class="select" id="strategy"><option>D1 / H4</option></select></div><div class="statusline"><i class="dot"></i><span style="font-weight:700">Robot PAPER</span><span class="muted">• Belum terhubung</span></div></section>
-<section class="card"><div class="label">SALDO PAPER</div><div class="balance">— <span class="muted" style="font-size:14px">IDR</span></div><div class="metrics"><div class="metric"><small>PnL hari ini</small><b>—</b></div><div class="metric"><small>Posisi aktif</small><b>0</b></div></div></section>
-<section class="card"><div class="sectionhead">AKTIVITAS <span>DATA ROBOT</span></div><div class="empty"><div class="symbol">◌</div><b>Belum ada aktivitas</b><div style="margin-top:4px;font-size:12px">Data akan muncul setelah backend PAPER tersambung.</div></div></section>
+<section class="card"><div class="row"><div><div class="label">MODE TRADING</div><strong id="modeLabel">Futures</strong></div><div class="pill">SIMULASI</div></div><div class="tabs"><button data-mode="Spot">Spot</button><button data-mode="Futures" class="active">Futures</button></div><div class="row" style="margin-top:14px"><span class="muted">Strategi aktif</span><select class="select" id="strategy"><option>D1 / H4</option></select></div><div class="statusline"><i class="dot"></i><span style="font-weight:700">Robot PAPER</span><span class="muted" id="connection">• Menghubungkan backend…</span></div></section>
+<section class="card"><div class="label">SALDO PAPER</div><div class="balance"><span id="balance">—</span> <span class="muted" style="font-size:14px">unit akun PAPER</span></div><div class="metrics"><div class="metric"><small>PnL hari ini</small><b id="pnl">—</b></div><div class="metric"><small>Posisi aktif</small><b id="positionCount">0</b></div></div></section>
+<section class="card" id="walletCard"><div class="sectionhead">WALLET PAPER <span>READ-ONLY</span></div><div class="metrics"><div class="metric"><small>Available</small><b id="walletAvailable">—</b></div><div class="metric"><small>Equity</small><b id="walletEquity">—</b></div></div><div class="muted" id="walletPosition">Nilai posisi: —</div><p class="muted">Wallet simulasi internal PAPER; bukan saldo exchange dan tidak melakukan transfer.</p></section>
+<section class="card"><div class="sectionhead">AKTIVITAS <span>DATA ROBOT</span></div><div class="empty" id="activity"><div class="symbol">◌</div><b>Memuat aktivitas PAPER…</b></div></section>
 <section class="card"><div class="sectionhead">MENU TRADING <span id="menuMode">FUTURES</span></div><div class="actions"><button class="action" data-page="AI Scan"><span class="ico">⌁</span>AI Scan</button><button class="action" data-page="Manual"><span class="ico">✎</span>Manual</button><button class="action" data-page="Strategi"><span class="ico">⚙</span>Strategi</button></div></section>
-<section class="card" id="pageCard"><div class="sectionhead" id="pageTitle">STATUS ROBOT <span>PAPER</span></div><div class="muted" id="pageText">Mini App masih berupa prototipe UI. Belum mengirim order atau membaca data robot.</div></section>
+<section class="card" id="pageCard"><div class="sectionhead" id="pageTitle">STATUS ROBOT <span>PAPER</span></div><div class="muted" id="pageText">Dashboard mengambil status langsung dari backend PAPER lokal.</div></section>
 <nav class="nav"><button class="active" data-nav="Status"><span class="ico">▦</span>Status</button><button data-nav="Aktivitas"><span class="ico">☷</span>Aktivitas</button><button data-nav="Analisis"><span class="ico">⌁</span>Analisis</button><button data-nav="News"><span class="ico">▤</span>News</button></nav>
-<p class="notice">PAPER ONLY · Tidak terhubung ke exchange · Tidak melakukan trading</p>
+<p class="notice">PAPER ONLY · Backend dashboard lokal · Tidak ada order LIVE</p>
 <script>
-const tg=window.Telegram&&window.Telegram.WebApp;if(tg){tg.ready();tg.expand();document.getElementById('telegramNotice').style.display='block';const u=tg.initDataUnsafe&&tg.initDataUnsafe.user;document.getElementById('tgStatus').textContent=u?'Terbuka di Telegram · '+(u.first_name||'pengguna'):'Terbuka di Telegram · konteks pengguna tidak tersedia';}const modeLabel=document.getElementById('modeLabel'),menuMode=document.getElementById('menuMode');document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-mode]').forEach(x=>x.classList.toggle('active',x===b));modeLabel.textContent=b.dataset.mode;menuMode.textContent=b.dataset.mode.toUpperCase()});
-const title=document.getElementById('pageTitle'),txt=document.getElementById('pageText');const pages={Status:['STATUS ROBOT','Mini App masih berupa prototipe UI. Belum mengirim order atau membaca data robot.'],Aktivitas:['AKTIVITAS','Riwayat aktivitas akan ditampilkan setelah backend PAPER tersambung.'],Analisis:['ANALISIS PAPER','Analisis D1/H4 akan ditampilkan dari robot setelah integrasi backend.'],News:['NEWS','Panel berita akan disambungkan pada tahap integrasi.'], 'AI Scan':['AI SCAN','Pemindaian simulasi belum diaktifkan.'],Manual:['MANUAL','Kontrol manual PAPER akan disiapkan setelah endpoint backend tersedia.'],Strategi:['STRATEGI','Pilihan strategi dan konfigurasi akan disambungkan ke backend.']};function show(p){title.innerHTML=pages[p][0]+' <span>PAPER</span>';txt.textContent=pages[p][1];document.querySelectorAll('[data-nav]').forEach(x=>x.classList.toggle('active',x.dataset.nav===p));}document.querySelectorAll('[data-nav]').forEach(b=>b.onclick=()=>show(b.dataset.nav));document.querySelectorAll('[data-page]').forEach(b=>b.onclick=()=>show(b.dataset.page));
+const tg=window.Telegram&&window.Telegram.WebApp;if(tg){tg.ready();tg.expand();document.getElementById('telegramNotice').style.display='block';const u=tg.initDataUnsafe&&tg.initDataUnsafe.user;document.getElementById('tgStatus').textContent=u?'Telegram aktif · '+(u.first_name||'pengguna'):'Telegram aktif · konteks pengguna tidak tersedia';}
+const tgInitData=(window.Telegram&&window.Telegram.WebApp&&window.Telegram.WebApp.initData)||'';const connection=document.getElementById('connection');let currentMode='Futures',state=null;
+async function api(path,body){const headers={'X-Telegram-Init-Data':tgInitData};const opt=body===undefined?{headers}:{method:'POST',headers:{...headers,'Content-Type':'application/json'},body:JSON.stringify(body)};const r=await fetch(path,opt);let j;try{j=await r.json()}catch{throw Error('Respons backend tidak valid')}if(!r.ok)throw Error(j.error||('HTTP '+r.status));return j}
+function node(tag,text,cls){const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e}
+function message(text,bad=false){connection.textContent='• '+text;connection.style.color=bad?'#ff7777':'#63e0bd'}
+function showPage(p){const copy={Status:['STATUS ROBOT','Status dan saldo diambil dari dashboard PAPER.'],Aktivitas:['AKTIVITAS','Ringkasan hasil siklus PAPER terakhir.'],Analisis:['ANALISIS PAPER','Strategi D1 regime / H4 eksekusi.'],News:['NEWS','News belum terhubung pada backend source ini.'], 'AI Scan':['AI SCAN','AI Scan memakai endpoint pemilihan dashboard.'],Manual:['MANUAL','Pilih simbol lalu Terapkan pilihan.'],Strategi:['STRATEGI','Strategi operasional yang tersedia: D1/H4 Futures PAPER.']};const x=copy[p]||copy.Status;document.getElementById('pageTitle').textContent=x[0]+' · PAPER';document.getElementById('pageText').textContent=x[1];document.querySelectorAll('[data-nav]').forEach(b=>b.classList.toggle('active',b.dataset.nav===p));}
+function render(s){state=s;currentMode=s.market||currentMode;document.querySelectorAll('[data-mode]').forEach(x=>x.classList.toggle('active',x.dataset.mode===currentMode));const tf=s.timeframes?.H4;if(!tf)throw Error('Backend tidak mengirim status H4');document.getElementById('modeLabel').textContent=currentMode;document.getElementById('menuMode').textContent=currentMode.toUpperCase();document.getElementById('balance').textContent=tf.balance==null?'—':Number(tf.balance).toLocaleString('id-ID',{maximumFractionDigits:4});document.getElementById('pnl').textContent=Number(tf.net_pnl||0).toLocaleString('id-ID',{maximumFractionDigits:4});document.getElementById('positionCount').textContent=tf.position?'1':'0';const w=tf.wallet||{};const fmt=v=>v==null?'—':Number(v).toLocaleString('id-ID',{maximumFractionDigits:4});document.getElementById('walletAvailable').textContent=fmt(w.available);document.getElementById('walletEquity').textContent=fmt(w.equity);document.getElementById('walletPosition').textContent='Nilai posisi (harga entry): '+fmt(w.position_value);const a=document.getElementById('activity');a.textContent='';a.appendChild(node('b',tf.last_step?('Siklus terakhir: '+(tf.last_step.status||tf.last_step.error||'selesai')):'Belum ada siklus PAPER'));a.appendChild(node('div','Robot: '+tf.robot_status+' · Simbol: '+(tf.coin||'belum dipilih')));if(tf.position)a.appendChild(node('div','Posisi: '+JSON.stringify(tf.position)));if(tf.halt?.halted)a.appendChild(node('div','HALT: '+(tf.halt.reason||'aktif')));const panel=document.getElementById('pageCard');panel.querySelector('#pageText').textContent='Exchange Tokocrypto · Futures · D1/H4 · '+(tf.coin||'simbol belum dipilih')+' · '+tf.robot_status;let select=document.getElementById('symbolSelect');if(!select){select=node('select');select.id='symbolSelect';select.className='select';select.style.marginTop='10px';document.getElementById('pageCard').appendChild(select)}const old=select.value;select.textContent='';for(const c of s.coins||[]){const o=node('option',c);o.value=c;o.selected=c===(tf.coin||old);select.appendChild(o)}message('Backend PAPER tersambung');}
+async function refresh(){try{render(await api('/api/state'))}catch(e){message(e.message,true)}}
+async function post(path,body){try{const r=await api(path,body);render(r.state||r);message('Aksi berhasil')}catch(e){message(e.message,true);await refresh()}}
+function applyScan(mode){return post('/api/select',{scan_mode:mode,timeframe:'H4',coin:document.getElementById('symbolSelect')?.value||null,market:currentMode})}
+document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=async()=>{const requested=b.dataset.mode;if(!state?.markets?.includes(requested)){message('Market '+requested+' belum tersedia pada backend',true);return}currentMode=requested;document.querySelectorAll('[data-mode]').forEach(x=>x.classList.toggle('active',x.dataset.mode===requested));try{const r=await api('/api/select',{scan_mode:'MANUAL',timeframe:'H4',coin:document.getElementById('symbolSelect')?.value||state.timeframes?.H4?.coin||state.coins?.[0],market:requested});render(r.state||r);message('Market '+requested+' dipilih · PAPER')}catch(e){message(e.message,true);await refresh()}});
+document.querySelectorAll('[data-nav]').forEach(b=>b.onclick=()=>showPage(b.dataset.nav));document.querySelectorAll('[data-page]').forEach(b=>b.onclick=()=>{showPage(b.dataset.page);if(b.dataset.page==='AI Scan')applyScan('AI_SCAN');});
+const actionBox=document.querySelector('.actions');const apply=node('button','Terapkan simbol','action'),disarm=node('button','Nonaktifkan robot','action'),step=node('button','1 Siklus PAPER','action');actionBox.textContent='';actionBox.append(apply,disarm,step);apply.onclick=()=>applyScan('MANUAL');disarm.onclick=()=>post('/api/disarm',{timeframe:'H4'});step.onclick=()=>post('/api/step',{timeframe:'H4'});refresh();setInterval(refresh,15000);
 </script></body></html>
